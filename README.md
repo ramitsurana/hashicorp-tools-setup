@@ -5,9 +5,31 @@ A Sample art of work on Vault
 
 ![layers-368ccce4](https://user-images.githubusercontent.com/8342133/34358547-ac3e3734-ea76-11e7-85dc-f1b65cc7d307.png)
 
+## Vault Config File
+
+Sample vault.conf file
+
+````
+backend "inmem" {
+}
+
+listener "tcp" {
+  address = "0.0.0.0:8200"
+  tls_disable = 1
+}
+
+disable_mlock = true
+````
+Running Vault Server with vault.conf file
+
+````
+$ vault server -config vault.conf
+````
+
 ## Setup
 
 * [Installation](#installation)
+* [Keys](#keys)
 * [Dev Mode](#dev-mode)
 * [Mounts](#mounts)
 * [Read/Write Token](#read/write-token)
@@ -26,6 +48,17 @@ Download the binary from https://www.vaultproject.io/downloads.html
 $ chmod +x vault
 $ mv vault /usr/local/bin/
 $ export VAULT_ADDR='http://127.0.0.1:8200'
+````
+
+#### Keys
+
+````
+// Set Keys and Threshold
+$ vault init -key-shares=5 -key-threshold=2
+
+// Unseal/Seal using min. no. of Key as mentioned in the threshold values 
+vault unseal <KEY1>
+vault unseal <KEY2>
 ````
 
 #### Dev mode
