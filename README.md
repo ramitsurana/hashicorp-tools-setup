@@ -160,7 +160,8 @@ MIT License
 ## References
 
 [1] [hashi-vault-utils](https://github.com/Voronenko/hashi_vault_utils)
-
+[2] [Spring Setup](https://spring.io/blog/2016/06/24/managing-secrets-with-vault)
+[3] [Spring Database MySql](https://spring.io/blog/2016/08/15/managing-your-database-secrets-with-vault)
 
 
 
