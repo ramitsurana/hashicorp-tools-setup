@@ -153,9 +153,13 @@ $ vault write transit/decrypt/foo ciphertext=vault:v1:czEwyKqGZY/limnuzDCUUe5AK0
 $ echo "dGhlIHF1aWNrIGJyb3duIGZveAo=" | base64 -d
 ````
 
+## License
 
+MIT License
 
+## References
 
+[1] [hashi-vault-utils](https://github.com/Voronenko/hashi_vault_utils)
 
 
 
